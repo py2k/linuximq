@@ -1603,7 +1603,7 @@ index 5baa8e2..9740e8c 100644
 +		goto err_unlock;
 +#endif
 +	} else {
-+		qh = rcu_dereference(queue_handler);
++		qh = rcu_dereference(net->nf.queue_handler);
 +	}
 +
  	if (!qh) {
