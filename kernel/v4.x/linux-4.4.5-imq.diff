@@ -1594,7 +1594,7 @@ index 5baa8e2..9740e8c 100644
  	const struct nf_queue_handler *qh;
  
  	/* QUEUE == DROP if no one is waiting, to be safe. */
--	qh = rcu_dereference(queue_handler);
+-	qh = rcu_dereference(net->queue_handler);
 +	if (queuetype == NF_IMQ_QUEUE) {
 +#if defined(CONFIG_IMQ) || defined(CONFIG_IMQ_MODULE)
 +		qh = rcu_dereference(queue_imq_handler);
